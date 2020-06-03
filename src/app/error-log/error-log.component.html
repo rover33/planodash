@@ -1,0 +1,56 @@
+
+<mat-card class="error-container">
+    <mat-card-content *ngFor="let error of errors">
+        <mat-card class="error-cards">
+                <div class="error-id">
+                    <label class="error-label">Id:</label>
+                    {{error.id | json}}
+                </div>
+                <div class="error-error">
+                    <label class="error-label">Error:</label>
+                    {{error.error | json}}
+                </div>
+            </mat-card>
+    </mat-card-content>
+</mat-card>
+
+
+<style>
+
+    .error-container {
+        background: white;
+        border: 1px solid black;
+        color: red;
+        max-height: 30rem;
+        max-width: 50rem;
+        overflow-y: scroll;
+        padding-bottom: 1rem;
+    }
+
+    .error-cards{
+        background-color: white;
+    }
+
+    .error-label, li {
+        color: black
+    }
+
+     .error-id {
+        color: green;
+    }
+
+    .error-error {
+        color: red;
+    }
+
+
+    .error-container::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+
+    .error-container::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 2px solid white;
+        background-color: rgba(0, 0, 0, .5);
+    }
+</style>

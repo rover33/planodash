@@ -1,0 +1,80 @@
+<mat-card class="request-container">
+    <mat-card-content *ngFor="let request of requests">
+        <mat-card class="request-cards">
+            <div class="request-id">
+                <label class="request-label">Id:</label>
+                {{request.id | json}}
+            </div>
+            <div class="request-service">
+                <label class="request-label">Service:</label>
+                {{request.service | json}}
+            </div>
+            <div class="request-version">
+                <label class="request-label">Version:</label>
+                {{request.service | json}}
+            </div>
+            <div class="request-action">
+                <label class="request-label">Action:</label>
+                {{request.service | json}}
+            </div>
+            <div class="request-result">
+                <label class="request-label">Result:</label>
+                {{request.service | json}}
+            </div>
+            <div class="request-created">
+                <label class="request-label">Created At:</label>
+                {{request.created_at | json}}
+            </div>
+        </mat-card>
+    </mat-card-content>
+</mat-card>
+
+<style>
+    .request-container {
+        background: white;
+        border: 1px solid black;
+        color: black;
+        max-height: 40rem;
+        width: 30rem;
+        overflow-y: scroll;
+        padding-bottom: 1rem;
+    }
+
+    .request-cards {
+        background-color: white;
+    }
+
+    .request-id {
+        color: green;
+    }
+
+    .request-label, li {
+        color: black
+    }
+
+    .request-service,
+    .request-version,
+    .request-action,
+    .request-result,
+    .request-created {
+        color: blue;
+    }
+
+    .request-container::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+
+    .request-container::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 2px solid white;
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    @media screen and (max-width: 600px) {
+        .request-container {
+            width: unset
+        }
+    }
+
+    
+</style>
